@@ -1,0 +1,79 @@
+
+	//add the container box div
+$(document).ready(function(){
+	$('body').append('<button id="reset">New</button>');
+	$("button").css({
+		display:'block',
+		padding:'5px 20px',
+		margin:'0 auto',
+	});	
+	$('body').append('<div class="container"></div>');
+	$(".container").css({
+		height:'400px',
+		width:'400px',
+		border:'1px solid black',
+		margin:'10px auto 0px auto'
+	});
+
+	$('.container').prepend('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		.append('<div class="block"><div>')
+		
+	$('.block').css({
+		height:'100px',
+		width:'100px',
+		border:'0px',
+		margin:'0px',
+		padding:'0px',
+		float:'left'
+	});
+	$('.block').mouseenter(function(){
+		$(this).css('background-color', '#666');
+	});
+	$('#reset').click(function(){
+		$('body').empty();
+		$('body').append('<button id="reset">New</button>');
+		$("button").css({
+		display:'block',
+		padding:'5px 20px',
+		margin:'0 auto',
+		});	
+		$('body').append('<div class="container"></div>');
+		$(".container").css({
+		height:'400px',
+		width:'400px',
+		border:'1px solid black',
+		margin:'10px auto 0px auto'
+	});
+
+	var size = prompt("Enter number less than or equal to 96.");
+
+	newGrid(size);
+
+		function newGrid(size){
+			var div = '';
+			for(i = 0; i < size; i++){
+				div += '<div class="container"></div>';
+			}
+		}
+		
+	$('.container').append(div);
+	
+	});
+	
+
+});
+
